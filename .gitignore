@@ -1,0 +1,9 @@
+/_site
+/.bundle
+/node_modules
+/vendor
+.idea
+assets
+.jekyll-cache
+.eslintcache
+Gemfile.lock

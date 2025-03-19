@@ -1,0 +1,29 @@
+title: "Company Name"
+url: "https://yourcompany.com"
+description: "We are here to make the world of e-commerce a better place with our knowledge, innovation & dedication."
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - _site
+  - package*.json
+  - "*.config.js"
+  - README.md
+  - node_modules
+  - core
+  - Gemfile
+  - Gemfile.lock
+
+collections:
+  team:
+    output: true
+  values:
+    output: false
+
+include:
+  - _pages
+
+permalink: pretty
