@@ -92,7 +92,7 @@
     </div>
 
     <!-- Certifications -->
-    <div class="mt-20 border-t border-gray-800 flex flex-wrap justify-center space-x-8">
+    <div class="mt-20 flex flex-wrap justify-center space-x-8">
       <img src="https://cdn2.mageplaza.com/mp/assets/img/icons-new/adobe-ico.png" alt="Adobe Technology Partner" class="h-10">
       <img src="https://cdn2.mageplaza.com/mp/assets/img/icons-new/developer-ico.png" alt="Magento Badges" class="h-10">
       <img src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-trustpilot.png" alt="Trustpilot" class="h-10">
@@ -113,6 +113,17 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const backToTopBtn = document.getElementById('backToTopBtn');
+      
+      // Responsive positioning based on screen size
+      const adjustButtonPosition = () => {
+        if (window.innerWidth < 768) {
+          backToTopBtn.classList.add('bottom-4', 'right-4');
+          backToTopBtn.classList.remove('bottom-8', 'right-8');
+        } else {
+          backToTopBtn.classList.add('bottom-8', 'right-8');
+          backToTopBtn.classList.remove('bottom-4', 'right-4');
+        }
+      };
       
       // Hiển thị/ẩn nút dựa vào vị trí cuộn
       window.addEventListener('scroll', function() {
@@ -137,8 +148,17 @@
         }
       });
       
+      // Run on load and resize
+      adjustButtonPosition();
+      window.addEventListener('resize', adjustButtonPosition);
+      
       // Kích hoạt sự kiện scroll một lần để đặt trạng thái ban đầu
       window.dispatchEvent(new Event('scroll'));
     });
   </script>
+
+  <!-- Responsive Footer Grid -->
+  <div class="footer-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-12">
+    <!-- Footer content will go here -->
+  </div>
 </footer>

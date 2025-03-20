@@ -27,6 +27,7 @@
 
   .container {
     @apply px-4 mx-auto;
+    max-width: 100%;
   }
 }
 
@@ -53,6 +54,20 @@
   
   .section-title {
     @apply text-3xl font-bold mb-12 text-center;
+  }
+  
+  @media (max-width: 640px) {
+    .card {
+      @apply p-4;
+    }
+    
+    .section {
+      @apply py-8;
+    }
+    
+    .section-title {
+      @apply text-2xl mb-8;
+    }
   }
 }
 
@@ -149,4 +164,95 @@
     border-right: none;
     border-bottom: 1px solid grey;
   }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    @apply text-base;
+  }
+  
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  h3 {
+    @apply text-xl;
+  }
+  
+  .btn {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-dot {
+    margin-left: 30px;
+  }
+}
+
+/* Responsive Grid Layouts */
+.responsive-grid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 640px) {
+  .sm-py-4 {
+    @apply py-4;
+  }
+  
+  .sm-px-4 {
+    @apply px-4;
+  }
+}
+
+/* Sửa lỗi khoảng trống bên phải */
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  footer, main, section, div {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Đảm bảo tất cả các grid không bị overflow */
+  .grid {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  /* Đặt lại các styles có thể gây ra vấn đề */
+  [style*="margin-left"], [style*="margin-right"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Đảm bảo thiết lập cho tất cả các container có vấn đề */
+.container-fluid, .container, main > div, section > div, footer > div {
+  max-width: 100%;
+  overflow-x: hidden;
 }

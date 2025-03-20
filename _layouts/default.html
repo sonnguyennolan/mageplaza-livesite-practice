@@ -10,6 +10,12 @@
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   {% seo %}
   
+  <!-- Thêm các meta tags cho responsive tốt hơn -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
   <!-- Schema.org markup for Google -->
   <script type="application/ld+json">
   {
@@ -52,11 +58,55 @@
   }
   </script>
   {% include schema.html %}
+  
+  <!-- Responsive Base CSS -->
+  <style>
+    /* Đảm bảo các ảnh không bị overflow container */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Đảm bảo các table có thể scroll trên mobile */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Base responsive font size */
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+    }
+    
+    /* Ngăn chặn horizontal overflow */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+    
+    /* Đảm bảo các container không gây overflow */
+    .container-fluid, .container {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box;
+    }
+    
+    /* Đảm bảo không có phần tử nào vượt quá màn hình */
+    * {
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
+<body class="font-sans antialiased text-gray-900 bg-gray-50 min-h-screen flex flex-col">
   {% include header.html %}
   
-  <main class="flex-grow">
+  <main class="flex-grow min-h-screen">
     {{ content }}
   </main>
   
