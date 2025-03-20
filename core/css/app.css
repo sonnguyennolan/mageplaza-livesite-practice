@@ -103,3 +103,50 @@
   background-color: #e5e7eb;
   transform: translateX(-50%);
 }
+
+/* Responsive Styles for Stats Section */
+@media (max-width: 768px) {
+  .stats-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Timeline styles */
+.timeline-image {
+  position: relative;
+  background-image: url('https://cdn2.mageplaza.com/media/about-us/timeline-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  border-radius: 0.5rem;
+}
+
+.timeline-dot {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.timeline-dot:hover {
+  transform: scale(1.2);
+}
+
+/* Border styles for the values section */
+@media (min-width: 768px) {
+  .border-class {
+    border-right: 1px solid grey;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .border-class {
+    border-right: none;
+    border-bottom: 1px solid grey;
+  }
+}
