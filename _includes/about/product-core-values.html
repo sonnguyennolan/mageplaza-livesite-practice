@@ -1,42 +1,46 @@
 <!-- Product and Core Values Section -->
-<section class="py-16 bg-white sm-py-8">
+<section class="py-16 bg-white sm:py-8">
     <div class="container mx-auto px-4">
         <!-- Tabs Navigation -->
-        <div class="flex justify-center mb-8">
-            <div class="max-w-3xl w-full text-center">
-                <div class="inline-flex relative flex-wrap md:flex-nowrap">
-                    <button class="text-2xl md:text-2xl sm:text-xl font-bold pb-2 focus:outline-none values-tab active text-indigo-800 w-full md:w-auto md:mr-8 mb-4 md:mb-0" data-tab="product-values">
+        <div class="flex justify-center mb-8 tabs-navigation md:block hidden">
+            <div class="max-w-3xl w-full text-center tabs-container">
+                <div class="inline-flex relative flex-wrap md:flex-nowrap values-tab-wrapper justify-between w-full">
+                    <button
+                        class="text-2xl md:text-2xl sm:text-xl font-bold pb-2 focus:outline-none values-tab active text-indigo-800 w-full md:w-auto mb-4 md:mb-0 flex-1 text-center cursor-pointer"
+                        data-tab="product-values">
                         Product values
                     </button>
-                    <button class="text-2xl md:text-2xl sm:text-xl font-bold pb-2 focus:outline-none values-tab text-gray-400 w-full md:w-auto" data-tab="core-values">
+                    <button
+                        class="text-2xl md:text-2xl sm:text-xl font-bold pb-2 focus:outline-none values-tab text-gray-400 w-full md:w-auto flex-1 text-center cursor-pointer"
+                        data-tab="core-values">
                         Core values
                     </button>
                 </div>
                 <div class="h-0.5 bg-gray-200 w-full mt-2 relative">
-                    <div class="absolute top-0 h-0.5 bg-indigo-800 transition-all duration-300 values-indicator" style="width: 50%; left: 0;"></div>
+                    <div class="absolute top-0 h-0.5 bg-indigo-800 transition-all duration-300 values-indicator w-1/2 left-0"></div>
                 </div>
             </div>
         </div>
 
         <!-- Loại bỏ khoảng cách thừa -->
-        <div class="mb-16 md:mb-12 sm:mb-8"></div>
+        <div class="mb-16 md:mb-12 sm:mb-8 md:mb-8 sm:mb-4"></div>
 
         <!-- Tab Contents -->
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto values-content-container max-w-4xl">
             <!-- Product Values Content -->
-            <div class="values-content active" id="product-values">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8">
+            <div class="values-content active block" id="product-values">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 md:gap-y-6 sm:gap-y-4">
                     <!-- Value for money -->
-                    <div class="flex">
-                        <div class="flex-shrink-0 mr-4">
-                            <div class="w-16 h-16 rounded-full flex items-center justify-center">
+                    <div class="flex mb-4 md:mb-0">
+                        <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                            <div class="w-16 h-16 md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
                                 <img src="https://cdn2.mageplaza.com/media/about-us/value-for-money.svg"
-                                    alt="Value for money" class="w-12 h-12">
+                                    alt="Value for money" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-3">Value for money</h3>
-                            <p class="text-gray-600">We strive to deliver high-quality extensions at affordable costs &
+                            <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Value for money</h3>
+                            <p class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">We strive to deliver high-quality extensions at affordable costs &
                                 provide exceptional value to clients.</p>
                         </div>
                     </div>
@@ -125,7 +129,8 @@
                     <div class="flex">
                         <div class="flex-shrink-0 mr-4">
                             <div class="w-16 h-16 rounded-full flex items-center justify-center">
-                                <img src="https://cdn2.mageplaza.com/media/about-us/Customer-focus.svg" alt="Customer focus" class="w-12 h-12">
+                                <img src="https://cdn2.mageplaza.com/media/about-us/Customer-focus.svg"
+                                    alt="Customer focus" class="w-12 h-12">
                             </div>
                         </div>
                         <div>
@@ -134,12 +139,13 @@
                                 listening to customers, understanding and fulfilling their needs.</p>
                         </div>
                     </div>
-                    
+
                     <!-- Human/People -->
                     <div class="flex">
                         <div class="flex-shrink-0 mr-4">
                             <div class="w-16 h-16 rounded-full flex items-center justify-center">
-                                <img src="https://cdn2.mageplaza.com/media/about-us/Human-people.svg" alt="Human/People" class="w-12 h-12">
+                                <img src="https://cdn2.mageplaza.com/media/about-us/Human-people.svg" alt="Human/People"
+                                    class="w-12 h-12">
                             </div>
                         </div>
                         <div>
@@ -149,12 +155,13 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <!-- Integrity -->
                     <div class="flex">
                         <div class="flex-shrink-0 mr-4">
                             <div class="w-16 h-16 rounded-full flex items-center justify-center">
-                                <img src="https://cdn2.mageplaza.com/media/about-us/Integrity.svg" alt="Integrity" class="w-12 h-12">
+                                <img src="https://cdn2.mageplaza.com/media/about-us/Integrity.svg" alt="Integrity"
+                                    class="w-12 h-12">
                             </div>
                         </div>
                         <div>
@@ -164,12 +171,13 @@
                                 integrity both at work and beyond.</p>
                         </div>
                     </div>
-                    
+
                     <!-- Quality -->
                     <div class="flex">
-                        <div class="flex-shrink-0mr-4">
+                        <div class="flex-shrink-0 mr-4">
                             <div class="w-16 h-16 rounded-full flex items-center justify-center">
-                                <img src="https://cdn2.mageplaza.com/media/about-us/Quality.svg" alt="Quality" class="w-12 h-12">
+                                <img src="https://cdn2.mageplaza.com/media/about-us/Quality.svg" alt="Integrity"
+                                    class="w-12 h-12">
                             </div>
                         </div>
                         <div>
@@ -186,15 +194,39 @@
 
     <!-- JavaScript for tab switching -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            // Thêm class tabs-container cho tabs
+            const tabsContainer = document.querySelector('.max-w-3xl.w-full.text-center');
+            if (tabsContainer) {
+                tabsContainer.classList.add('tabs-container');
+            }
+            
+            // Thêm class tabs-navigation vào phần điều hướng tabs
+            const tabsNavigation = document.querySelector('.flex.justify-center.mb-8');
+            if (tabsNavigation) {
+                tabsNavigation.classList.add('tabs-navigation');
+            }
+            
+            // Thêm wrapper cho tabs để căn chỉnh tốt hơn
+            const tabsWrapper = document.querySelector('.inline-flex.relative.flex-wrap.md\\:flex-nowrap');
+            if (tabsWrapper) {
+                tabsWrapper.classList.add('values-tab-wrapper');
+            }
+            
+            // Thêm class values-content-container vào container
+            const contentContainer = document.querySelector('.max-w-6xl.mx-auto');
+            if (contentContainer) {
+                contentContainer.classList.add('values-content-container');
+            }
+            
             // Lấy tham chiếu đến các elements
             const valuesTabs = document.querySelectorAll('.values-tab');
-            const tabContents = document.querySelectorAll('[id^="values-content-"]'); // Giả định content có id là values-content-*
+            const tabContents = document.querySelectorAll('.values-content');
             const indicator = document.querySelector('.values-indicator');
             
             // Kiểm tra nếu ở mobile view
             function isMobileView() {
-                return window.innerWidth < 768; // Sử dụng breakpoint 768px giống như md: trong Tailwind
+                return window.innerWidth < 768;
             }
             
             // Hàm xử lý hiển thị tab
@@ -202,67 +234,97 @@
                 if (isMobileView()) {
                     // Mobile: Hiển thị tất cả tab contents
                     tabContents.forEach(content => {
+                        // Đảm bảo nội dung hiển thị
+                        content.classList.remove('hidden');
                         content.style.display = 'block';
-                        
-                        // Thêm tiêu đề cho mỗi section để rõ ràng hơn
+
+                        // Thêm tiêu đề cho mỗi section
                         if (!content.querySelector('.mobile-tab-title')) {
-                            const tabId = content.id.replace('values-content-', '');
-                            const tabTitle = document.querySelector(`[data-tab="${tabId}"]`).textContent.trim();
-                            
-                            const titleEl = document.createElement('h3');
-                            titleEl.className = 'mobile-tab-title text-xl font-bold mb-4 mt-8 text-indigo-800';
-                            titleEl.textContent = tabTitle;
-                            content.prepend(titleEl);
+                            const tabId = content.id;
+                            const tabButton = document.querySelector(`[data-tab="${tabId}"]`);
+
+                            if (tabButton) {
+                                const tabTitle = tabButton.textContent.trim();
+
+                                const titleEl = document.createElement('h3');
+                                titleEl.className = 'mobile-tab-title';
+                                titleEl.textContent = tabTitle;
+                                content.prepend(titleEl);
+                            }
+                        } else {
+                            // Hiển thị tiêu đề nếu đã tồn tại
+                            const mobileTitle = content.querySelector('.mobile-tab-title');
+                            if (mobileTitle) mobileTitle.style.display = 'block';
                         }
                     });
                     
-                    // Ẩn indicator vì không cần thiết trong mobile
-                    if (indicator) indicator.style.opacity = '0';
+                    // Ẩn indicator trên mobile
+                    if (indicator) {
+                        indicator.style.opacity = '0';
+                    }
                 } else {
                     // Desktop: Khôi phục hành vi tab thông thường
                     const activeTab = document.querySelector('.values-tab.active');
                     const activeTabId = activeTab ? activeTab.getAttribute('data-tab') : 'product-values';
                     
                     tabContents.forEach(content => {
-                        const tabId = content.id.replace('values-content-', '');
+                        const contentId = content.id;
                         
                         // Chỉ hiển thị tab đang active
-                        content.style.display = tabId === activeTabId ? 'block' : 'none';
+                        if (contentId === activeTabId) {
+                            content.classList.remove('hidden');
+                            content.style.display = 'block';
+                        } else {
+                            content.classList.add('hidden');
+                            content.style.display = 'none';
+                        }
                         
-                        // Ẩn tiêu đề mobile nếu có
+                        // Ẩn tiêu đề mobile
                         const mobileTitle = content.querySelector('.mobile-tab-title');
                         if (mobileTitle) mobileTitle.style.display = 'none';
                     });
                     
-                    // Hiển thị lại indicator
-                    if (indicator) indicator.style.opacity = '1';
+                    // Hiển thị và cập nhật vị trí indicator
+                    if (indicator) {
+                        indicator.style.opacity = '1';
+                        // Chỉ cập nhật vị trí nếu có activeTab
+                        if (activeTab) {
+                            indicator.style.left = activeTab === valuesTabs[0] ? '0' : '50%';
+                        }
+                    }
                 }
             }
             
-            // Xử lý click vào tab
+            // Xử lý click vào tab (chỉ áp dụng cho desktop)
             valuesTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
+                tab.addEventListener('click', function () {
+                    if (isMobileView()) return;
+                    
                     const tabId = this.getAttribute('data-tab');
                     
-                    // Chỉ xử lý trên desktop
-                    if (!isMobileView()) {
-                        // Update active state
-                        valuesTabs.forEach(t => t.classList.remove('active', 'text-indigo-800'));
-                        valuesTabs.forEach(t => t.classList.add('text-gray-400'));
-                        this.classList.add('active', 'text-indigo-800');
-                        this.classList.remove('text-gray-400');
-                        
-                        // Di chuyển indicator
-                        if (indicator) {
-                            indicator.style.left = this === valuesTabs[0] ? '0' : '50%';
-                        }
-                        
-                        // Hiển thị tab content tương ứng
-                        tabContents.forEach(content => {
-                            const contentId = content.id.replace('values-content-', '');
-                            content.style.display = contentId === tabId ? 'block' : 'none';
-                        });
+                    // Update active state
+                    valuesTabs.forEach(t => {
+                        t.classList.remove('active', 'text-indigo-800');
+                        t.classList.add('text-gray-400');
+                    });
+                    this.classList.add('active', 'text-indigo-800');
+                    this.classList.remove('text-gray-400');
+                    
+                    // Di chuyển indicator
+                    if (indicator) {
+                        indicator.style.left = this === valuesTabs[0] ? '0' : '50%';
                     }
+                    
+                    // Hiển thị tab content tương ứng
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.remove('hidden');
+                            content.style.display = 'block';
+                        } else {
+                            content.classList.add('hidden');
+                            content.style.display = 'none';
+                        }
+                    });
                 });
             });
             
@@ -275,30 +337,141 @@
     </script>
 
     <style>
-        /* Styles cho mobile view */
-        @media (max-width: 767px) {
-            /* Ẩn indicator trong mobile */
+        /* Điều chỉnh tabs và content cho desktop */
+        @media (min-width: 768px) {
+            /* Đảm bảo container tabs và content có cùng độ rộng tối đa */
+            .tabs-container, .values-content-container {
+                max-width: 1024px !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /* Căn chỉnh text với indicator */
+            .values-tab-wrapper {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                position: relative;
+            }
+            
+            /* Căn chỉnh tabs với nhau */
+            .values-tab {
+                cursor: pointer;
+                flex: 1;
+                text-align: center;
+                position: relative;
+                /* Loại bỏ margin-right để không bị lệch */
+                margin-right: 0 !important;
+            }
+            
+            /* Căn chỉnh indicator để phù hợp với tab */
             .values-indicator {
-                display: none;
+                width: 50% !important;
+                transition: left 0.3s ease;
             }
             
-            /* Tạo khoảng cách giữa các sections */
-            [id^="values-content-"] {
-                margin-bottom: 2rem;
-                padding-bottom: 2rem;
-                border-bottom: 1px solid #eaeaea;
+            /* Đảm bảo content không rộng hơn tabs */
+            .max-w-6xl {
+                max-width: 1024px !important;
             }
             
-            /* Tiêu đề section trên mobile */
             .mobile-tab-title {
-                display: block;
+                display: none;
             }
         }
         
-        /* Styles cho desktop view */
-        @media (min-width: 768px) {
+        /* Styles cho mobile view */
+        @media (max-width: 767px) {
+            /* Các styles hiện tại cho mobile vẫn giữ nguyên */
+            /* Ẩn hoàn toàn phần tabs navigation trên mobile */
+            .tabs-navigation {
+                display: none !important;
+            }
+
+            /* Ẩn indicator trong mobile */
+            .values-indicator {
+                display: none !important;
+            }
+
+            /* Điều chỉnh section padding */
+            section.py-16 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            /* Giảm khoảng cách thừa phía trên */
+            .mb-16, .md\:mb-12, .sm\:mb-8 {
+                margin-bottom: 1rem !important;
+            }
+
+            /* Giảm khoảng cách trong grid */
+            .grid.gap-y-12 {
+                gap: 1.5rem !important;
+            }
+
+            /* Thu gọn khoảng cách giữa icon và text */
+            .flex-shrink-0.mr-4 {
+                margin-right: 0.75rem !important;
+            }
+
+            /* Thu nhỏ icon container */
+            .w-16.h-16 {
+                width: 3rem !important;
+                height: 3rem !important;
+            }
+
+            /* Thu nhỏ icon */
+            .w-12.h-12 {
+                width: 2rem !important;
+                height: 2rem !important;
+            }
+
+            /* Giảm khoảng cách giữa tiêu đề và nội dung */
+            .text-xl.font-semibold.mb-3 {
+                margin-bottom: 0.5rem !important;
+                font-size: 1.1rem !important;
+            }
+
+            /* Giảm font size cho paragraph */
+            .text-gray-600 {
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Đảm bảo tabs content hiển thị gọn gàng */
+            .values-content {
+                display: block !important;
+                margin-bottom: 1.5rem !important;
+                padding-bottom: 1rem !important;
+                border-bottom: 1px solid #eaeaea;
+            }
+
+            /* Đặt lại khoảng cách trên đầu content khi không có tabs */
+            .values-content-container {
+                margin-top: 0 !important;
+            }
+
+            /* Hiện tiêu đề của mỗi section gọn gàng hơn */
             .mobile-tab-title {
-                display: none;
+                display: block;
+                font-size: 1.25rem !important;
+                font-weight: bold;
+                color: #4338ca;
+                margin-bottom: 1rem !important;
+                padding-bottom: 0.25rem !important;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            
+            /* Khoảng cách giữa các phần tử của tab content */
+            #product-values > div > div,
+            #core-values > div > div {
+                margin-bottom: 1rem !important;
+            }
+            
+            /* Giảm padding của container */
+            .container.mx-auto.px-4 {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
             }
         }
     </style>
