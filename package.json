@@ -3,21 +3,32 @@
   "version": "1.0.0",
   "description": "Company website built with Jekyll, TailwindCSS and AlpineJS",
   "scripts": {
-    "start": "concurrently -k -p \"[{name}]\" -n \"css,jekyll\" -c \"green.bold,cyan.bold\" \"npm run watch:css\" \"npm run watch:jekyll\"",
-    "build": "npm run build:css && bundle exec jekyll build",
+    "start": "concurrently -k -p \"[{name}]\" -n \"css,js,jekyll\" -c \"green.bold,blue.bold,cyan.bold\" \"npm run watch:css\" \"npm run watch:js\" \"npm run watch:jekyll\"",
+    "build": "npm run build:css && npm run build:js && bundle exec jekyll build",
     "build:css": "postcss core/css/app.css -o assets/css/app.css",
+    "build:js": "encore prod",
     "watch:css": "postcss core/css/app.css -o assets/css/app.css --watch",
+    "watch:js": "encore dev --watch",
     "watch:jekyll": "bundle exec jekyll serve --livereload --drafts --open"
   },
   "dependencies": {
     "alpinejs": "^3.13.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@symfony/webpack-encore": "^5.1.0",
     "autoprefixer": "^10.4.16",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^10.0.0",
     "concurrently": "^8.2.2",
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
-    "tailwindcss": "^3.3.6"
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.3.6",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-notifier": "^1.15.0"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
