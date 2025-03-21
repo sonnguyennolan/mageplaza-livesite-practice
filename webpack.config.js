@@ -31,9 +31,6 @@ Encore
     .configureBabel((config) => {
         config.presets.push('@babel/preset-env');
     })
-    
-    // Kích hoạt xử lý JS qua Babel
-    .enableBabelTypeScriptPreset()
 ;
 
 module.exports = Encore.getWebpackConfig();
