@@ -4,11 +4,969 @@ title: About Us
 permalink: /aboutus/
 ---
 
-{% include about/hero.html %}
-{% include about/vision-mission.html %}
-{% include about/stats.html %}
-{% include about/dream-team.html %}
-{% include about/history-timeline.html %}
-{% include about/product-core-values.html %}
-{% include about/blog-dev-docs.html %}
-{% include about/newsletter.html %}
+<!-- Hero Section -->
+<section class="flex flex-col xl:flex-row bg-[#02007F]">
+    <div class="text-white py-8 sm:py-12 xl:py-24 w-full xl:w-1/2 px-4 sm:px-8 xl:pl-20 2xl:pl-40 flex items-center">
+        <div>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4 sm:mb-8 text-[#39E070]">About Mageplaza</h1>
+            <div class="text-base sm:text-lg leading-relaxed">
+                <p>We are here to make the world of e-</p>
+                <p>commerce a better place with our</p>
+                <p class="mb-3">
+                    <span class="text-[#39E070]">knowledge</span>,
+                    <span class="text-[#39E070]">innovation</span> &
+                    <span class="text-[#39E070]">dedication</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full xl:w-1/2 overflow-hidden">
+        <img src="https://cdn2.mageplaza.com/media/about-us/mageplaza.webp" alt="Mageplaza Team - Da Nang 2022"
+            class="object-cover w-full h-auto sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-auto">
+    </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-10 md:space-y-0 md:space-x-16">
+
+            <!-- Vision -->
+            <div class="flex items-start w-full md:w-auto md:flex-1 md:max-w-xl">
+                <div class="mr-8">
+                    <img class="" src="https://cdn2.mageplaza.com/media/about-us/vision.png" alt="Vision" />
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Vision</h2>
+                    <p class="text-lg">To become the world's leading company in providing e-commerce solutions.</p>
+                </div>
+            </div>
+
+            <!-- Horizontal Divider for Mobile -->
+            <div class="block md:hidden w-full h-px bg-gray-400 my-8"></div>
+
+            <!-- Vertical Divider for Desktop -->
+            <div class="hidden md:block w-px bg-gray-400 h-48 mx-4"></div>
+
+            <!-- Mission -->
+            <div class="flex items-start w-full md:w-auto md:flex-1 md:max-w-xl">
+                <div class="mr-8">
+                    <img class="" src="https://cdn2.mageplaza.com/media/about-us/mision.png" alt="Mission" />
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Mission</h2>
+                    <p class="text-lg">To deliver top e-commerce solutions for customer growth and success.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-[#02007F] relative overflow-hidden">
+    <!-- Background Map Dots -->
+    <div class="absolute inset-0">
+        <img src="https://cdn2.mageplaza.com/media/about-us/group-dot.png" alt="World Map Dots"
+            class="w-full object-contain max-h-full">
+    </div>
+
+    <div class="container mx-auto px-3 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-4 text-center">
+            <!-- Years in business -->
+            <div>
+                <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 bg-gradient-to-r from-[#39E070] to-[#28b3d2] bg-clip-text text-transparent inline-block overflow-hidden">
+                    11+</div>
+                <div class="text-white">Years in business</div>
+            </div>
+
+            <!-- M2 extensions -->
+            <div>
+                <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 bg-gradient-to-r from-[#39E070] to-[#28b3d2] bg-clip-text text-transparent inline-block overflow-hidden">
+                    225+</div>
+                <div class="text-white">M2 extensions</div>
+            </div>
+
+            <!-- Global customers -->
+            <div>
+                <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 bg-gradient-to-r from-[#39E070] to-[#28b3d2] bg-clip-text text-transparent inline-block overflow-hidden">
+                    130K+</div>
+                <div class="text-white">Global customers</div>
+            </div>
+
+            <!-- Downloads -->
+            <div>
+                <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 bg-gradient-to-r from-[#39E070] to-[#28b3d2] bg-clip-text text-transparent inline-block overflow-hidden">
+                    25M+</div>
+                <div class="text-white">Downloads</div>
+            </div>
+
+            <!-- Countries -->
+            <div>
+                <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 bg-gradient-to-r from-[#39E070] to-[#28b3d2] bg-clip-text text-transparent inline-block overflow-hidden">
+                    176+</div>
+                <div class="text-white">Countries</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">Our dream team</h2>
+        <p class="text-gray-500 text-center max-w-3xl mx-auto mb-16">
+            We are a team of young, creative developers with a passion for innovation and a
+            strong dedication to serving our customers.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Team Member 1 - Brian -->
+            <div
+                class="bg-white rounded border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="p-8">
+                    <div class="flex items-start mb-5">
+                        <img src="https://cdn2.mageplaza.com/mp/assets/img/avatar/img1.png" alt="Brian"
+                            class="w-16 h-16 object-cover rounded-full mr-4">
+                    </div>
+                    <div>
+                        <p class="text-gray-500 uppercase text-xs tracking-wider">CO-FOUNDER & CEO</p>
+                        <h3 class="text-xl font-bold text-indigo-900">Brian</h3>
+                    </div>
+                    <p class="text-gray-500 mb-4">
+                        A perfectionist with a warm heart. A Magento expert with 10 years of intense experiece
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-gray-500 hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 - Jack -->
+            <div
+                class="bg-white rounded border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="p-8">
+                    <div class="flex items-start mb-5">
+                        <img src="https://cdn2.mageplaza.com/mp/assets/img/avatar/img5.png" alt="Jack"
+                            class="w-16 h-16 object-cover rounded-full mr-4">
+                    </div>
+                    <div>
+                        <p class="text-gray-500 uppercase text-xs tracking-wider">CTO</p>
+                        <h3 class="text-xl font-bold text-indigo-900">Jack</h3>
+                    </div>
+                    <p class="text-gray-500 mb-4">
+                        Has big love and passion for technology. A professional coder and an ultra-marathon runner.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-gray-500 hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 - Summer Ng -->
+            <div
+                class="bg-white rounded border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="p-8">
+                    <div class="flex items-start mb-5">
+                        <img src="https://cdn2.mageplaza.com/mp/assets/img/avatar/img4.png" alt="Summer Ng"
+                            class="w-16 h-16 object-cover rounded-full mr-4">
+                    </div>
+                    <div>
+                        <p class="text-gray-500 uppercase text-xs tracking-wider">CMO</p>
+                        <h3 class="text-xl font-bold text-indigo-900">Summer Ng</h3>
+                    </div>
+                    <p class="text-gray-500 mb-4">
+                        An inquisitive person who spares the most space in her heart for animals, nature and marketing
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-pink-600 hover:text-white">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 p-2 rounded flex items-center justify-center w-10 h-10 transition-all duration-300 hover:-translate-y-1 hover:bg-gray-500 hover:text-white">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline History Section -->
+<section class="py-8 md:py-16 bg-[#E7EAF3]" x-data="{
+        activeTab: '2014-2017',
+        currentSlide2018: 0,
+        currentSlide: 0,
+        slides2018: null, 
+        slides: null,
+        dots2018: null,
+        dots: null,
+        isMobileView() {
+            return window.innerWidth < 768;
+        }
+    }" x-init="
+        slides2018 = [...$el.querySelectorAll('#period-2018-now .timeline-slide')];
+        dots2018 = [...$el.querySelectorAll('.timeline-dot-2018')];
+        slides = [...$el.querySelectorAll('#period-2014-2017 .timeline-slide')];
+        dots = [...$el.querySelectorAll('.timeline-dot')];
+        
+        $watch('activeTab', value => {
+            if(!isMobileView()) {
+                document.querySelectorAll('.timeline-period').forEach(period => {
+                    period.classList.add('hidden');
+                });
+                document.getElementById(`period-${value}`).classList.remove('hidden');
+            }
+        });
+        
+        // Khởi tạo swipe detection
+        const handleSwipe = (element, prev, next) => {
+            let touchStartX = 0;
+            
+            element.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            element.addEventListener('touchend', (e) => {
+                const touchEndX = e.changedTouches[0].screenX;
+                if (touchEndX < touchStartX - 50) next(); // Swipe left
+                if (touchEndX > touchStartX + 50) prev(); // Swipe right
+            }, {passive: true});
+        };
+        
+        // Setup swipe cho từng timeline
+        handleSwipe(
+            document.querySelector('#period-2018-now .slider-wrapper'),
+            () => { if (currentSlide2018 > 0) currentSlide2018--; },
+            () => { if (currentSlide2018 < slides2018.length - 1) currentSlide2018++; }
+        );
+        
+        handleSwipe(
+            document.querySelector('#period-2014-2017 .slider-wrapper'),
+            () => { if (currentSlide > 0) currentSlide--; },
+            () => { if (currentSlide < slides.length - 1) currentSlide++; }
+        );
+        
+        // Khởi tạo cho responsive
+        window.addEventListener('resize', () => {
+            if(isMobileView()) {
+                document.getElementById('period-2018-now').classList.add('hidden');
+                document.getElementById('period-2014-2017').classList.remove('hidden');
+            }
+        });
+    ">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Mageplaza History</h2>
+
+        <!-- Timeline Navigation Tabs -->
+        <div class="max-w-4xl mx-auto mb-8 md:mb-16">
+            <div class="flex justify-center space-x-12 md:space-x-32 mb-4">
+                <button class="text-lg md:text-xl py-2 focus:outline-none timeline-tab"
+                    :class="activeTab === '2018-now' ? 'text-indigo-800 active' : 'text-gray-600'"
+                    @click="activeTab = '2018-now'" data-period="2018-now">
+                    2018 - now
+                </button>
+                <button class="text-lg md:text-xl py-2 focus:outline-none timeline-tab"
+                    :class="activeTab === '2014-2017' ? 'text-indigo-800 active' : 'text-gray-600'"
+                    @click="activeTab = '2014-2017'" data-period="2014-2017">
+                    2014 - 2017
+                </button>
+            </div>
+            <div class="h-0.5 bg-gray-300 relative">
+                <div class="absolute h-0.5 bg-indigo-700 transition-all duration-300 w-1/2 tab-indicator"
+                    :class="activeTab === '2018-now' ? 'left-0' : 'left-1/2'" id="tab-indicator"></div>
+            </div>
+        </div>
+
+        <!-- Timeline Content -->
+        <div class="timeline-content max-w-5xl mx-auto relative">
+            <!-- 2018-now Period -->
+            <div class="timeline-period" :class="{'hidden': activeTab !== '2018-now'}" id="period-2018-now">
+                <h3 class="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">Leading Magento 2 solution provider
+                </h3>
+                <p class="text-base md:text-lg text-gray-600 text-center mb-8 md:mb-12">Mageplaza has been recognized
+                    globally as the most popular extension builder since 2018.</p>
+
+                <!-- Timeline Slider -->
+                <div class="mx-auto p-2 pt-5 md:pt-7 pb-8 md:pb-12 relative rounded-lg bg-[#02007F]">
+                    <!-- Background Image with Overlay -->
+                    <div class="absolute inset-0 rounded-lg opacity-30">
+                        <img class="w-full h-full object-cover"
+                            src="https://cdn2.mageplaza.com/media/about-us/mageplaza.webp" alt="About Us">
+                    </div>
+
+                    <!-- Slider Content -->
+                    <div class="relative z-10 max-w-6xl mx-auto">
+                        <div class="slider-wrapper">
+                            <!-- Slide 1: 2023-2021 -->
+                            <div class="timeline-slide"
+                                :class="{'hidden': currentSlide2018 !== 0, 'active': currentSlide2018 === 0}">
+                                <!-- Timeline Points -->
+                                <div class="relative mb-6 md:mb-10 px-4">
+                                    <div
+                                        class="absolute top-1/2 left-0 right-0 h-px bg-white transform -translate-y-1/2">
+                                    </div>
+                                    <div class="flex justify-between relative">
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2023</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2022</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2021</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Content -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4">
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Became Adobe Silver Technology Partner & made
+                                            22+ extensions compatible with Hyva theme.</p>
+                                    </div>
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Rebranded with a new logo & released the
+                                            subscription policy.</p>
+                                    </div>
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Released 5 new extensions & expanded the catalog
+                                            to 234 extensions.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: 2020-2018 (Hidden initially) -->
+                            <div class="timeline-slide"
+                                :class="{'hidden': currentSlide2018 !== 1, 'active': currentSlide2018 === 1}">
+                                <!-- Timeline Points -->
+                                <div class="relative mb-6 md:mb-10 px-4">
+                                    <div
+                                        class="absolute top-1/2 left-0 right-0 h-px bg-white transform -translate-y-1/2">
+                                    </div>
+                                    <div class="flex justify-between relative">
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2020</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2019</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2018</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Content -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4">
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Reached 100,000+ customers worldwide & expanded
+                                            team to 50+ members.</p>
+                                    </div>
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Launched premium support service & improved
+                                            extension compatibility.</p>
+                                    </div>
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Released 20+ new extensions & became Magento
+                                            Business Solution Partner.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button
+                            class="absolute left-1 md:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-md timeline-prev-2018 z-20"
+                            :class="{'opacity-50': currentSlide2018 === 0}"
+                            @click="if(currentSlide2018 > 0) currentSlide2018--" :disabled="currentSlide2018 === 0">
+                            <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button
+                            class="absolute right-1 md:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-md timeline-next-2018 z-20"
+                            :class="{'opacity-50': currentSlide2018 === (slides2018?.length - 1)}"
+                            @click="if(currentSlide2018 < (slides2018?.length - 1)) currentSlide2018++"
+                            :disabled="currentSlide2018 === (slides2018?.length - 1)">
+                            <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Timeline Dots -->
+                    <div class="flex justify-center mt-6 md:mt-8 space-x-2">
+                        <button class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white timeline-dot-2018"
+                            :class="{'active': currentSlide2018 === 0, 'opacity-50': currentSlide2018 !== 0}"
+                            @click="currentSlide2018 = 0"></button>
+                        <button class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white timeline-dot-2018"
+                            :class="{'active': currentSlide2018 === 1, 'opacity-50': currentSlide2018 !== 1}"
+                            @click="currentSlide2018 = 1"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2014-2017 Period -->
+            <div class="timeline-period" :class="{'hidden': activeTab !== '2014-2017'}" id="period-2014-2017">
+                <h3 class="text-xl md:text-2xl font-bold text-center mb-3 md:mb-4">A fast-growing extension builder for
+                    Magento 2</h3>
+                <p class="text-base md:text-lg text-gray-600 text-center mb-8 md:mb-12">After the initial success in
+                    Magento 2 extensions, Mageplaza consistently experienced annual double growth.</p>
+
+                <!-- Timeline Slider -->
+                <div class="mx-auto p-2 pt-5 md:pt-7 pb-8 md:pb-12 relative rounded-lg bg-[#02007F]">
+                    <!-- Background Image with Overlay -->
+                    <div class="absolute inset-0 rounded-lg opacity-30">
+                        <img class="w-full h-full object-cover"
+                            src="https://cdn2.mageplaza.com/media/about-us/mageplaza.webp" alt="About Us">
+                    </div>
+
+                    <!-- Slider Content -->
+                    <div class="relative z-10 max-w-6xl mx-auto">
+                        <div class="slider-wrapper">
+                            <!-- First Slide: 2016-2014 -->
+                            <div class="timeline-slide"
+                                :class="{'hidden': currentSlide !== 0, 'active': currentSlide === 0}">
+                                <!-- Timeline Points -->
+                                <div class="relative mb-6 md:mb-10 px-4">
+                                    <div
+                                        class="absolute top-1/2 left-0 right-0 h-px bg-white transform -translate-y-1/2">
+                                    </div>
+                                    <div class="flex justify-between relative">
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2016</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2015</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2014</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Content -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4">
+                                    <div class="text-white">
+                                        <ul class="list-disc pl-5 space-y-2">
+                                            <li class="text-base md:text-lg">Switched main focus to Magento 2 solutions.
+                                            </li>
+                                            <li class="text-base md:text-lg">Released
+                                                <a href="#" class="text-blue-300 hover:underline">Social Login</a>,
+                                                <a href="#" class="text-blue-300 hover:underline">One Step Checkout</a>
+                                                &
+                                                <a href="#" class="text-blue-300 hover:underline">Layered
+                                                    Navigation</a>.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Expanded Mageplaza with 10 members.</p>
+                                    </div>
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Mageplaza was founded by two members, Sam and
+                                            Brian.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second Slide: 2017 -->
+                            <div class="timeline-slide"
+                                :class="{'hidden': currentSlide !== 1, 'active': currentSlide === 1}">
+                                <!-- Timeline Points -->
+                                <div class="relative mb-6 md:mb-10 px-4">
+                                    <div
+                                        class="absolute top-1/2 left-0 right-0 h-px bg-white transform -translate-y-1/2">
+                                    </div>
+                                    <div class="flex justify-between relative">
+                                        <div class="text-center">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">2017</div>
+                                        </div>
+                                        <div class="text-center opacity-0">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">-</div>
+                                        </div>
+                                        <div class="text-center opacity-0">
+                                            <div class="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white inline-block"></div>
+                                            <div class="text-base md:text-xl font-semibold text-white mt-2">-</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Content -->
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4">
+                                    <div class="text-white">
+                                        <p class="text-base md:text-lg">Released 15 news extensions & hit 60k visitor
+                                            traffic in a month.</p>
+                                    </div>
+                                    <div class="text-white opacity-0">
+                                        <p class="text-base md:text-lg">-</p>
+                                    </div>
+                                    <div class="text-white opacity-0">
+                                        <p class="text-base md:text-lg">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button
+                            class="absolute left-1 md:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-md timeline-prev z-20"
+                            :class="{'opacity-50': currentSlide === 0}" @click="if(currentSlide > 0) currentSlide--"
+                            :disabled="currentSlide === 0">
+                            <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button
+                            class="absolute right-1 md:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-md timeline-next z-20"
+                            :class="{'opacity-50': currentSlide === (slides?.length - 1)}"
+                            @click="if(currentSlide < (slides?.length - 1)) currentSlide++"
+                            :disabled="currentSlide === (slides?.length - 1)">
+                            <svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Timeline Dots -->
+                    <div class="flex justify-center mt-6 md:mt-8 space-x-2">
+                        <button class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white timeline-dot"
+                            :class="{'active': currentSlide === 0, 'opacity-50': currentSlide !== 0}"
+                            @click="currentSlide = 0"></button>
+                        <button class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white timeline-dot"
+                            :class="{'active': currentSlide === 1, 'opacity-50': currentSlide !== 1}"
+                            @click="currentSlide = 1"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product and Core Values Section -->
+<section class="py-16 bg-white sm:py-8 md:py-12" x-data="{
+        activeTab: 'product-values',
+        isMobileView() {
+            return window.innerWidth < 768;
+        }
+    }" x-init="
+        // Theo dõi thay đổi kích thước màn hình
+        window.addEventListener('resize', () => {
+            if (isMobileView()) {
+                $refs.productValues.classList.remove('hidden');
+                $refs.coreValues.classList.remove('hidden');
+                $refs.coreValues.classList.add('md:hidden');
+                
+                if (!$refs.productValues.querySelector('.product-title')) {
+                    const productTitle = document.createElement('h3');
+                    productTitle.className = 'text-xl font-bold mb-4 pb-1 text-indigo-800 border-b border-gray-200 md:hidden product-title';
+                    productTitle.textContent = 'Product values';
+                    $refs.productValues.prepend(productTitle);
+
+                    const coreTitle = document.createElement('h3');
+                    coreTitle.className = 'text-xl font-bold mb-4 pb-1 text-indigo-800 border-b border-gray-200 md:hidden core-title';
+                    coreTitle.textContent = 'Core values';
+                    $refs.coreValues.prepend(coreTitle);
+                }
+            } else {
+                if (activeTab === 'product-values') {
+                    $refs.productValues.classList.remove('hidden');
+                    $refs.coreValues.classList.add('hidden');
+                } else {
+                    $refs.productValues.classList.add('hidden');
+                    $refs.coreValues.classList.remove('hidden');
+                    $refs.coreValues.classList.remove('md:hidden');
+                }
+                
+                // Xóa các tiêu đề mobile nếu có
+                const productTitle = $refs.productValues.querySelector('.product-title');
+                const coreTitle = $refs.coreValues.querySelector('.core-title');
+                if (productTitle) productTitle.remove();
+                if (coreTitle) coreTitle.remove();
+            }
+        });
+        
+        // Khởi tạo trạng thái ban đầu
+        if (isMobileView()) {
+            // Mobile: Hiển thị cả hai phần nội dung
+            $refs.productValues.classList.remove('hidden');
+            $refs.coreValues.classList.remove('hidden');
+            $refs.coreValues.classList.add('md:hidden');
+            
+            // Thêm tiêu đề với class cụ thể để dễ xác định
+            const productTitle = document.createElement('h3');
+            productTitle.className = 'text-xl font-bold mb-4 pb-1 text-indigo-800 border-b border-gray-200 md:hidden product-title';
+            productTitle.textContent = 'Product values';
+            $refs.productValues.prepend(productTitle);
+
+            const coreTitle = document.createElement('h3');
+            coreTitle.className = 'text-xl font-bold mb-4 pb-1 text-indigo-800 border-b border-gray-200 md:hidden core-title';
+            coreTitle.textContent = 'Core values';
+            $refs.coreValues.prepend(coreTitle);
+        }
+        
+        // Đảm bảo indicator có transition mượt mà
+        $refs.indicator.classList.add('transform', 'transition-all', 'duration-300', 'ease-in-out');
+    ">
+    <div class="container mx-auto px-4 sm:px-3">
+        <!-- Container cho cả tabs và nội dung -->
+        <div class="max-w-3xl mx-auto">
+            <!-- Tabs Navigation -->
+            <div class="flex justify-center mb-8 md:block hidden">
+                <div class="w-full text-center">
+                    <div class="inline-flex relative flex-wrap md:flex-nowrap justify-between w-full">
+                        <button
+                            class="text-2xl md:text-2xl sm:text-xl font-bold pb-2 focus:outline-none w-full md:w-auto mb-4 md:mb-0 flex-1 text-center cursor-pointer"
+                            :class="activeTab === 'product-values' ? 'active text-indigo-800' : 'text-gray-400'" @click="
+                                if (!isMobileView()) {
+                                    activeTab = 'product-values';
+                                    $refs.productValues.classList.remove('hidden');
+                                    $refs.coreValues.classList.add('hidden');
+                                    $refs.indicator.style.left = '0';
+                                }
+                            " data-tab="product-values">
+                            Product values
+                        </button>
+                        <button
+                            class="text-2xl md:text-2xl sm:text-xl font-bold pb-2 focus:outline-none w-full md:w-auto flex-1 text-center cursor-pointer"
+                            :class="activeTab === 'core-values' ? 'active text-indigo-800' : 'text-gray-400'" @click="
+                                if (!isMobileView()) {
+                                    activeTab = 'core-values';
+                                    $refs.productValues.classList.add('hidden');
+                                    $refs.coreValues.classList.remove('hidden');
+                                    $refs.coreValues.classList.remove('md:hidden');
+                                    $refs.indicator.style.left = '50%';
+                                }
+                            " data-tab="core-values">
+                            Core values
+                        </button>
+                    </div>
+                    <div class="h-0.5 bg-gray-200 w-full mt-2 relative">
+                        <div x-ref="indicator" class="absolute top-0 h-0.5 bg-indigo-800 transition-all duration-300 w-1/2"
+                            :class="activeTab === 'product-values' ? 'left-0' : 'left-1/2'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loại bỏ khoảng cách thừa -->
+            <div class="mb-16 md:mb-8 sm:mb-4"></div>
+
+            <!-- Tab Contents -->
+            <div>
+                <!-- Product Values Content -->
+                <div class="block" id="product-values" x-ref="productValues"
+                    :class="{'hidden': !isMobileView() && activeTab !== 'product-values'}">
+                    <h3 class="text-xl font-bold mb-4 pb-1 text-indigo-800 border-b border-gray-200 md:hidden"
+                        x-show="isMobileView()">Product values</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 md:gap-y-6 sm:gap-y-4">
+                        <!-- Value for money -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/value-for-money.svg"
+                                        alt="Value for money" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Value for
+                                    money</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    We strive to deliver high-quality extensions at affordable costs &
+                                    provide exceptional value to clients.</p>
+                            </div>
+                        </div>
+
+                        <!-- Diversity-->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/diversity.svg" alt="Diversity"
+                                        class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Diversity
+                                </h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    Mageplaza is proud to offer 224+ extensions, addressing diverse
+                                    challenges for all business.</p>
+                            </div>
+                        </div>
+
+                        <!-- Security & performance -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/security-performance.svg"
+                                        alt="Security & performance" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Security &
+                                    performance</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    Our solutions adhere to strict data protection regulations,
+                                    ensuring the highest standards of information security.</p>
+                            </div>
+                        </div>
+
+                        <!-- Useful features -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/customer-centric-product-design.svg"
+                                        alt="Useful features" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Useful
+                                    features</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    Our solutions are designed with unique features to address the
+                                    specific needs of e-businesses.</p>
+                            </div>
+                        </div>
+
+                        <!-- Customer-centric product design -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/customer-centric-product-design.svg"
+                                        alt="Customer-centric product design" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">
+                                    Customer-centric product design</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    Our product design is centered around the customer experience.
+                                    Focus on UI and UX.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dedicated support -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/Dedicated-support.svg"
+                                        alt="Dedicated support" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Dedicated
+                                    support</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    We offer dedicated support and comprehensive resources for a
+                                    seamless customer experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Values Content -->
+                <div class="mt-8 pt-6 border-t border-gray-200 md:border-0 md:mt-0 md:pt-0 md:hidden" id="core-values"
+                    x-ref="coreValues"
+                    :class="{'hidden': !isMobileView() && activeTab !== 'core-values', 'md:hidden': isMobileView()}">
+                    <h3 class="text-xl font-bold mb-4 pb-1 text-indigo-800 border-b border-gray-200 md:hidden"
+                        x-show="isMobileView()">Core values</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8 md:gap-y-6 sm:gap-y-4">
+                        <!-- Customer focus -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/Customer-focus.svg"
+                                        alt="Customer focus" class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Customer
+                                    focus</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    Customer satisfaction is our primary goal. We achieve this by truly
+                                    listening to customers, understanding and fulfilling their needs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Human/People -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/Human-people.svg" alt="Human/People"
+                                        class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Human/People
+                                </h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    We believe in the collective strength of individuals. Prioritizing
+                                    the well-being, growth, and collaboration of our people is key to our overall success.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Integrity -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/Integrity.svg" alt="Integrity"
+                                        class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Integrity
+                                </h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    At Mageplaza, integrity is our cornerstone. We conduct business
+                                    with authenticity, honesty, and transparency. Each team member upholds and enhances
+                                    integrity both at work and beyond.</p>
+                            </div>
+                        </div>
+
+                        <!-- Quality -->
+                        <div class="flex mb-4 md:mb-0">
+                            <div class="flex-shrink-0 mr-4 md:mr-3 sm:mr-2">
+                                <div class="md:w-12 md:h-12 sm:w-10 sm:h-10 rounded-full flex items-center justify-center">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/Quality.svg" alt="Quality"
+                                        class="w-12 h-12 md:w-8 md:h-8 sm:w-6 sm:h-6">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3 md:mb-2 sm:mb-1 md:text-lg sm:text-base">Quality</h3>
+                                <p
+                                    class="text-gray-600 md:text-sm sm:text-xs leading-relaxed md:leading-normal sm:leading-snug">
+                                    Mageplaza is dedicated to delivering top-quality products and
+                                    services. We strive for excellence, aiming to surpass expectations in every aspect of
+                                    our operations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resources -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Mageplaza Blog -->
+            <div class="bg-[#24B9F6] rounded-lg p-8 text-black">
+                <h3 class="text-2xl font-bold mb-4">Mageplaza Blog</h3>
+                <p class="mb-6">A library for Magento news, product updates, how-tos and tips for both merchants and
+                    developers.</p>
+                <a href="/blog"
+                    class="bg-white text-black py-2 px-6 rounded inline-block text-sm font-medium hover:bg-gray-100 transition">Find
+                    out more</a>
+            </div>
+
+            <!-- Mageplaza Dev-docs -->
+            <div class="bg-[#39E070] rounded-lg p-8 text-black">
+                <h3 class="text-2xl font-bold mb-4">Mageplaza Dev-docs</h3>
+                <p class="mb-6">An amazing & well-known resource written by Mageplaza to provide Magento know-hows for
+                    developers.</p>
+                <a href="/docs"
+                    class="bg-white text-black py-2 px-6 rounded inline-block text-sm font-medium hover:bg-gray-100 transition">Find
+                    out more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="bg-[#E7EAF3] py-4">
+    <div class="container mx-auto px-3 max-w-3xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between px-4 xl:px-72">
+            <!-- Text content -->
+            <div class="w-full md:w-3/5 mb-4 md:mb-0">
+                <h2 class="text-lg font-bold">Stay in the know</h2>
+                <p class="text-sm">Get special offers on the latest developments from Mageplaza</p>
+            </div>
+
+            <!-- Newsletter form -->
+            <div class="w-full md:w-2/5">
+                <form class="flex bg-white rounded shadow-sm">
+                    <input type="email" placeholder="Your email"
+                        class="flex-grow px-2 py-1.5 text-sm rounded-l border-0 focus:ring-0 focus:outline-none">
+                    <button type="submit" class="text-white px-3 py-1.5 rounded-r duration-300">
+                        <img src="https://cdn2.mageplaza.com/mp/assets/img/icons-new/submit-icon-1.png" class="h-4">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
