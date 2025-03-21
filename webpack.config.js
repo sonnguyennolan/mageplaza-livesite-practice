@@ -10,10 +10,10 @@ Encore
     .setPublicPath('/assets')
     
     // Thêm entry cho CSS
-    .addStyleEntry('app', './core/css/app.css')
+    .addStyleEntry('css/app', './core/css/app.css')
 
     // Chỉ cần một entry cho mỗi trang JavaScript
-    .addEntry('app', './core/js/app.js')
+    .addEntry('js/app', './core/js/app.js')
     
     // Bật SourceMaps cho development
     .enableSourceMaps(!Encore.isProduction())
