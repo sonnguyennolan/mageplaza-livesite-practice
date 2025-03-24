@@ -48,10 +48,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build Site
+      - name: Build JS and CSS
         run: |
           npm install
-          npm run build
+          npm run prod
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
