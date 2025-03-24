@@ -1,6 +1,6 @@
-title: "Name"
-url: "https://yourname.com"
-description: "We are here to make the world of e-commerce a better place with our knowledge, innovation & dedication."
+title: "Mageplaza"
+url: "https://www.mageplaza.com"
+description: "Mageplaza is a leading provider of Magento 2 extensions and services. We help businesses grow and succeed online with our innovative solutions."
 
 plugins:
   - jekyll-redirect-from

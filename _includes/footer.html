@@ -100,62 +100,53 @@
     </div>
   </div>
 
-  <!-- Back to top button with fade effect -->
-  <div id="backToTopBtn" class="fixed bottom-6 right-6 opacity-1 invisible transition-all duration-300">
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-md shadow-lg transition">
+  <!-- Back to top button with Alpine.js -->
+  <div x-data="{
+      show: false,
+      scrollThreshold: 300,
+      init() {
+        window.addEventListener('scroll', () => {
+          this.handleScroll();
+        });
+        this.handleScreenSize();
+        window.addEventListener('resize', () => {
+          this.handleScreenSize();
+        });
+      },
+      handleScroll() {
+        const scrollPosition = window.scrollY;
+        this.show = scrollPosition > this.scrollThreshold;
+        
+        if (this.show) {
+          // Tính toán độ mờ
+          const fadeStart = 300;
+          const fadeEnd = 600;
+          this.$el.style.opacity = Math.min((scrollPosition - fadeStart) / (fadeEnd - fadeStart), 1);
+        } else {
+          this.$el.style.opacity = 0;
+        }
+      },
+      handleScreenSize() {
+        if (window.innerWidth < 768) {
+          this.$el.classList.add('bottom-4', 'right-4');
+          this.$el.classList.remove('bottom-8', 'right-8');
+        } else {
+          this.$el.classList.add('bottom-8', 'right-8');
+          this.$el.classList.remove('bottom-4', 'right-4');
+        }
+      },
+      scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
+    }" 
+    class="fixed bottom-6 right-6 transition-all duration-300"
+    :class="{ 'invisible': !show }">
+    <button @click="scrollToTop()" class="bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-md shadow-lg transition">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
       </svg>
     </button>
   </div>
-
-  <!-- JavaScript for Back to Top button fade effect -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const backToTopBtn = document.getElementById('backToTopBtn');
-      
-      // Responsive positioning based on screen size
-      const adjustButtonPosition = () => {
-        if (window.innerWidth < 768) {
-          backToTopBtn.classList.add('bottom-4', 'right-4');
-          backToTopBtn.classList.remove('bottom-8', 'right-8');
-        } else {
-          backToTopBtn.classList.add('bottom-8', 'right-8');
-          backToTopBtn.classList.remove('bottom-4', 'right-4');
-        }
-      };
-      
-      // Hiển thị/ẩn nút dựa vào vị trí cuộn
-      window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        
-        // Hiển thị nút khi cuộn xuống 300px
-        if (scrollPosition > 300) {
-          backToTopBtn.classList.remove('invisible');
-          
-          // Tính toán độ mờ - mờ dần khi gần đến top
-          // Hoàn toàn mờ ở vị trí 300px, hoàn toàn hiện ở vị trí 600px
-          const fadeStart = 300;
-          const fadeEnd = 600;
-          let opacity = Math.min((scrollPosition - fadeStart) / (fadeEnd - fadeStart), 1);
-          
-          backToTopBtn.style.opacity = opacity;
-        } else {
-          // Ẩn hoàn toàn nút khi ở gần top
-          backToTopBtn.classList.add('invisible');
-          backToTopBtn.style.opacity = 0;
-        }
-      });
-      
-      // Run on load and resize
-      adjustButtonPosition();
-      window.addEventListener('resize', adjustButtonPosition);
-      
-      // Kích hoạt sự kiện scroll một lần để đặt trạng thái ban đầu
-      window.dispatchEvent(new Event('scroll'));
-    });
-  </script>
 
   <!-- Responsive Footer Grid -->
   <div class="footer-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-12">
