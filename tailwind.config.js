@@ -18,6 +18,13 @@ module.exports = {
             },
             width: {
                 82: "82%",
+                75: "75%",
+                "w-100": "30rem",
+            },
+            height: {
+                82: "82%",
+                75: "75%",
+                "h-100": "30rem",
             },
             padding: {
                 15: "4rem", // 72px (nếu 1rem = 16px)
