@@ -225,40 +225,7 @@ permalink: pages/solutions
     </section>
 
     <!-- Trusted Brands Section -->
-    <section class="py-12 md:py-16 px-4 md:px-8 lg:px-16 bg-white" x-data="{
-        brands: [
-            { name: 'Circle C', image: '{{ site.baseurl }}/images/circle-c.png' },
-            { name: 'Khasto', image: '{{ site.baseurl }}/images/khasto.png' },
-            { name: 'My Kingdom', image: '{{ site.baseurl }}/images/my-kingdom.png' },
-            { name: 'Peter Stevens', image: '{{ site.baseurl }}/images/peter-stevens.png' },
-            { name: 'Vinamilk', image: '{{ site.baseurl }}/images/vinamilk.png' },
-            { name: 'Yogya Online', image: '{{ site.baseurl }}/images/yogya-online.png' },
-            { name: 'Printster', image: '{{ site.baseurl }}/images/printster.png' },
-            { name: 'Bean Bags R Us', image: '{{ site.baseurl }}/images/bean-bags-r-us.png' },
-            { name: 'IBM', image: '{{ site.baseurl }}/images/ibm.png' },
-            { name: 'Acer', image: '{{ site.baseurl }}/images/acer.png' }
-        ],
-        isMobile: window.innerWidth < 768,
-        init() {
-            window.addEventListener('resize', () => {
-                this.isMobile = window.innerWidth < 768;
-            });
-        },
-        shouldHaveRightBorder(index) {
-            if (this.isMobile) {
-                return index % 2 === 0 && index < this.brands.length - 1;
-            } else {
-                return (index + 1) % 5 !== 0;
-            }
-        },
-        shouldHaveBottomBorder(index) {
-            if (this.isMobile) {
-                return index < this.brands.length - 2;
-            } else {
-                return index < 5;
-            }
-        }
-    }">
+    <section class="py-12 md:py-16 px-4 md:px-8 lg:px-16 bg-white">
         <div class="max-w-5xl mx-auto">
             <div class="container mx-auto">
                 <div class="text-center mb-8 md:mb-12">
@@ -272,15 +239,60 @@ permalink: pages/solutions
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-5">
-                    <template x-for="(brand, index) in brands" :key="index">
-                        <div class="h-24 flex items-center justify-center p-3 md:p-6" :class="{
-                                'border-r border-gray-300': shouldHaveRightBorder(index),
-                                'border-b border-gray-300': shouldHaveBottomBorder(index)
-                            }">
-                            <img :src="brand.image" :alt="brand.name"
-                                class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
-                        </div>
-                    </template>
+                    <div class="h-24 flex items-center justify-center p-3 md:p-6 border-r border-b border-gray-300">
+                        <img src="{{ site.baseurl }}/images/circle-c.png" alt="Circle C"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div class="h-24 flex items-center justify-center p-3 md:p-6 border-b border-gray-300 md:border-r">
+                        <img src="{{ site.baseurl }}/images/khasto.png" alt="Khasto"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div class="h-24 flex items-center justify-center p-3 md:p-6 border-r border-b border-gray-300">
+                        <img src="{{ site.baseurl }}/images/my-kingdom.png" alt="My Kingdom"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div class="h-24 flex items-center justify-center p-3 md:p-6 border-b border-gray-300 md:border-r">
+                        <img src="{{ site.baseurl }}/images/peter-stevens.png" alt="Peter Stevens"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div
+                        class="h-24 flex items-center justify-center p-3 md:p-6 border-b border-r md:border-r-0 border-gray-300">
+                        <img src="{{ site.baseurl }}/images/vinamilk.png" alt="Vinamilk"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div
+                        class="h-24 flex items-center justify-center p-3 md:p-6 border-b border-gray-300 md:border-r md:border-b-0">
+                        <img src="{{ site.baseurl }}/images/yogya-online.png" alt="Yogya Online"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div
+                        class="h-24 flex items-center justify-center p-3 md:p-6 border-b border-r border-gray-300 md:border-b-0 md:border-r">
+                        <img src="{{ site.baseurl }}/images/printster.png" alt="Printster"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div
+                        class="h-24 flex items-center justify-center p-3 md:p-6 md:border-r border-b border-gray-300 md:border-b-0">
+                        <img src="{{ site.baseurl }}/images/bean-bags-r-us.png" alt="Bean Bags R Us"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div
+                        class="h-24 flex items-center justify-center p-3 md:p-6 border-r border-gray-300 md:border-b-0 md:border-r">
+                        <img src="{{ site.baseurl }}/images/ibm.png" alt="IBM"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
+
+                    <div class="h-24 flex items-center justify-center p-3 md:p-6">
+                        <img src="{{ site.baseurl }}/images/acer.png" alt="Acer"
+                            class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
+                    </div>
                 </div>
             </div>
         </div>
