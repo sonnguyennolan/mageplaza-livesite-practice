@@ -1,29 +1,31 @@
 title: "Mageplaza"
 url: "https://www.mageplaza.com"
 description: "Mageplaza is a leading provider of Magento 2 extensions and services. We help businesses grow and succeed online with our innovative solutions."
+allow_search_engine: true
 
 plugins:
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-exclude:
-  - _site
-  - package*.json
-  - "*.config.js"
-  - README.md
-  - node_modules
-  - core
-  - Gemfile
-  - Gemfile.lock
-
-collections:
-  team:
-    output: true
-  values:
-    output: false
+    - jekyll-redirect-from
+    - jekyll-seo-tag
+    - jekyll-sitemap
 
 include:
-  - _pages
+    - _pages
+
+exclude:
+    - _site
+    - package*.json
+    - "*.config.js"
+    - README.md
+    - node_modules
+    - "assets/*.json"
+    - ".idea"
+
+baseurl: "/mageplaza-livesite-practice"
+
+collections:
+    team:
+        output: true
+    values:
+        output: false
 
 permalink: pretty
