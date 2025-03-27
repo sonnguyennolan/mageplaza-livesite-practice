@@ -604,393 +604,209 @@ permalink: pages/aboutus
 
 <!-- Product and Core Values Section -->
 <section class="py-20 bg-white sm:py-12 md:py-16" x-data="{
-        activeTab: 'product-values',
-        isMobileView() {
-            return window.innerWidth < 768;
-        }
-    }" x-init="
-        // Theo dõi thay đổi kích thước màn hình
-        window.addEventListener('resize', () => {
-            if (isMobileView()) {
-                // Hiển thị cả hai phần nội dung trên mobile
-                $refs.productValues.classList.remove('hidden');
-                $refs.coreValues.classList.remove('hidden');
-                $refs.coreValues.classList.add('md:hidden');
-            } else {
-                // Desktop: Hiển thị nội dung dựa trên tab đang active
-                if (activeTab === 'product-values') {
-                    $refs.productValues.classList.remove('hidden');
-                    $refs.coreValues.classList.add('hidden');
-                } else {
-                    $refs.productValues.classList.add('hidden');
-                    $refs.coreValues.classList.remove('hidden');
-                    $refs.coreValues.classList.remove('md:hidden');
-                }
-            }
-        });
-        
-        // Khởi tạo trạng thái ban đầu
-        if (isMobileView()) {
-            // Mobile: Hiển thị cả hai phần nội dung
-            $refs.productValues.classList.remove('hidden');
-            $refs.coreValues.classList.remove('hidden');
-            $refs.coreValues.classList.add('md:hidden');
-        }
-        
-        // Đảm bảo indicator có transition mượt mà
-        $refs.indicator.classList.add('transform', 'transition-all', 'duration-300', 'ease-in-out');
-    ">
+    activeTab: 'product-values',
+    isMobile: window.innerWidth < 768
+}" x-init="
+    window.addEventListener('resize', () => {
+        isMobile = window.innerWidth < 768;
+    });
+">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Container cho cả tabs và nội dung -->
         <div class="max-w-5xl mx-auto">
-            <!-- Tabs Navigation -->
-            <div class="flex justify-center mb-10 md:block hidden">
+            <!-- Tabs Navigation (chỉ hiển thị trên desktop) -->
+            <div class="hidden md:block mb-10">
                 <div class="w-full text-center">
                     <div class="inline-flex relative flex-wrap md:flex-nowrap justify-between w-full">
                         <button
-                            class="text-3xl md:text-3xl sm:text-2xl font-bold pb-3 focus:outline-none w-full md:w-auto mb-4 md:mb-0 flex-1 text-center cursor-pointer"
-                            :class="activeTab === 'product-values' ? 'active text-indigo-800' : 'text-gray-400'" @click="
-                                if (!isMobileView()) {
-                                    activeTab = 'product-values';
-                                    $refs.productValues.classList.remove('hidden');
-                                    $refs.coreValues.classList.add('hidden');
-                                    $refs.indicator.style.left = '0';
-                                }
-                            " data-tab="product-values">
+                            class="text-3xl font-bold pb-3 focus:outline-none flex-1 text-center cursor-pointer"
+                            :class="activeTab === 'product-values' ? 'active text-indigo-800' : 'text-gray-400'" 
+                            @click="activeTab = 'product-values'">
                             Product values
                         </button>
                         <button
-                            class="text-3xl md:text-3xl sm:text-2xl font-bold pb-3 focus:outline-none w-full md:w-auto flex-1 text-center cursor-pointer"
-                            :class="activeTab === 'core-values' ? 'active text-indigo-800' : 'text-gray-400'" @click="
-                                if (!isMobileView()) {
-                                    activeTab = 'core-values';
-                                    $refs.productValues.classList.add('hidden');
-                                    $refs.coreValues.classList.remove('hidden');
-                                    $refs.coreValues.classList.remove('md:hidden');
-                                    $refs.indicator.style.left = '50%';
-                                }
-                            " data-tab="core-values">
+                            class="text-3xl font-bold pb-3 focus:outline-none flex-1 text-center cursor-pointer"
+                            :class="activeTab === 'core-values' ? 'active text-indigo-800' : 'text-gray-400'" 
+                            @click="activeTab = 'core-values'">
                             Core values
                         </button>
                     </div>
                     <div class="h-1 bg-gray-200 w-full mt-3 relative">
-                        <div x-ref="indicator"
-                            class="absolute top-0 h-1 bg-indigo-800 transition-all duration-300 w-1/2"
+                        <div class="absolute top-0 h-1 bg-indigo-800 transition-all duration-300 w-1/2"
                             :class="activeTab === 'product-values' ? 'left-0' : 'left-1/2'">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Loại bỏ khoảng cách thừa -->
-            <div class="mb-12 md:mb-10 sm:mb-8"></div>
-
             <!-- Tab Contents -->
-            <div class="">
+            <div>
                 <!-- Product Values Content -->
-                <div class="block" id="product-values" x-ref="productValues"
-                    :class="{'hidden': !isMobileView() && activeTab !== 'product-values'}">
+                <div class="mb-12 md:mb-0" id="product-values"
+                    :class="{'hidden': !isMobile && activeTab !== 'product-values'}">
+                    <!-- Tiêu đề chỉ hiển thị trên mobile -->
                     <h3 class="text-4xl font-bold mb-6 pb-2 text-indigo-800 md:hidden text-center">
                         Product values
                     </h3>
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-6">
                         <!-- Value for money -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout: flexbox with icon left, text right -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/value-for-money.svg"
-                                        alt="Value for money" class="w-9 h-9">
+                                        alt="Value for money" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Value for money</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Value for money</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         We strive to deliver high-quality extensions at affordable costs &
                                         provide exceptional value to clients.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Original desktop layout - hidden on mobile -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/value-for-money.svg"
-                                            alt="Value for money" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Value for money</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    We strive to deliver high-quality extensions at affordable costs &
-                                    provide exceptional value to clients.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Diversity -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                                    <img src="https://cdn2.mageplaza.com/media/about-us/diversity.svg" alt="Diversity"
-                                        class="w-9 h-9">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
+                                    <img src="https://cdn2.mageplaza.com/media/about-us/diversity.svg"
+                                        alt="Diversity" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Diversity</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Diversity</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         Mageplaza is proud to offer 224+ extensions, addressing diverse
                                         challenges for all business.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/diversity.svg"
-                                            alt="Diversity" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Diversity</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    Mageplaza is proud to offer 224+ extensions, addressing diverse
-                                    challenges for all business.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Security & performance -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/security-performance.svg"
-                                        alt="Security & performance" class="w-9 h-9">
+                                        alt="Security & performance" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Security & performance</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Security & performance</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         Our solutions adhere to strict data protection regulations,
                                         ensuring the highest standards of information security.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/security-performance.svg"
-                                            alt="Security & performance" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Security & performance</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    Our solutions adhere to strict data protection regulations,
-                                    ensuring the highest standards of information security.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Useful features -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/customer-centric-product-design.svg"
-                                        alt="Useful features" class="w-9 h-9">
+                                        alt="Useful features" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Useful features</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Useful features</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         Our solutions are designed with unique features to address the
                                         specific needs of e-businesses.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/customer-centric-product-design.svg"
-                                            alt="Useful features" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Useful features</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    Our solutions are designed with unique features to address the
-                                    specific needs of e-businesses.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Customer-centric product design -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/customer-centric-product-design.svg"
-                                        alt="Customer-centric product design" class="w-9 h-9">
+                                        alt="Customer-centric product design" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Customer-centric product design</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Customer-centric product design</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         Our product design is centered around the customer experience.
                                         Focus on UI and UX.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/customer-centric-product-design.svg"
-                                            alt="Customer-centric product design" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-semibold">Customer-centric product design</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    Our product design is centered around the customer experience.
-                                    Focus on UI and UX.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Dedicated support -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/Dedicated-support.svg"
-                                        alt="Dedicated support" class="w-9 h-9">
+                                        alt="Dedicated support" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Dedicated support</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Dedicated support</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         We offer dedicated support and comprehensive resources for a
                                         seamless customer experience.
                                     </p>
                                 </div>
-                            </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/Dedicated-support.svg"
-                                            alt="Dedicated support" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Dedicated support</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    We offer dedicated support and comprehensive resources for a
-                                    seamless customer experience.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Core Values Content -->
-                <div class="mt-12 pt-8 border-t border-gray-200 md:border-0 md:mt-0 md:pt-0 md:hidden" id="core-values"
-                    x-ref="coreValues"
-                    :class="{'hidden': !isMobileView() && activeTab !== 'core-values', 'md:hidden': isMobileView()}">
+                <div class="mt-12 pt-8 border-t border-gray-200 md:mt-0 md:pt-0 md:border-0" id="core-values"
+                    :class="{'hidden': !isMobile && activeTab !== 'core-values'}">
+                    <!-- Tiêu đề chỉ hiển thị trên mobile -->
                     <h3 class="text-4xl font-bold mb-6 pb-2 text-indigo-800 md:hidden text-center">
                         Core values
                     </h3>
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-6">
                         <!-- Customer focus -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/Customer-focus.svg"
-                                        alt="Customer focus" class="w-9 h-9">
+                                        alt="Customer focus" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Customer focus</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Customer focus</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         Customer satisfaction is our primary goal. We achieve this by truly
                                         listening to customers, understanding and fulfilling their needs.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/Customer-focus.svg"
-                                            alt="Customer focus" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Customer focus</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    Customer satisfaction is our primary goal. We achieve this by truly
-                                    listening to customers, understanding and fulfilling their needs.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Human/People -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/Human-people.svg"
-                                        alt="Human/People" class="w-9 h-9">
+                                        alt="Human/People" class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Human/People</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Human/People</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         We believe in the collective strength of individuals. Prioritizing
                                         the well-being, growth, and collaboration of our people is key to our overall
                                         success.
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/Human-people.svg"
-                                            alt="Human/People" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Human/People</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    We believe in the collective strength of individuals. Prioritizing
-                                    the well-being, growth, and collaboration of our people is key to our overall
-                                    success.
-                                </p>
-
-                            </div>
                         </div>
 
                         <!-- Integrity -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/Integrity.svg" alt="Integrity"
-                                        class="w-9 h-9">
+                                        class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Integrity</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Integrity</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         At Mageplaza, integrity is our cornerstone. We conduct business
                                         with authenticity, honesty, and transparency. Each team member upholds and
                                         enhances
@@ -998,59 +814,24 @@ permalink: pages/aboutus
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/Integrity.svg"
-                                            alt="Integrity" class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-xl font-bold">Integrity</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2 pr-12">
-                                    At Mageplaza, integrity is our cornerstone. We conduct business
-                                    with authenticity, honesty, and transparency. Each team member upholds and enhances
-                                    integrity both at work and beyond.
-                                </p>
-                            </div>
                         </div>
 
                         <!-- Quality -->
                         <div class="mb-6 md:mb-0">
-                            <!-- Mobile layout -->
-                            <div class="md:hidden flex items-start">
-                                <div
-                                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-14 h-14 bg-blue-50 md:bg-transparent rounded-full md:rounded-none flex items-center justify-center mr-4 md:mr-1">
                                     <img src="https://cdn2.mageplaza.com/media/about-us/Quality.svg" alt="Quality"
-                                        class="w-9 h-9">
+                                        class="w-9 h-9 md:w-11 md:h-11">
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#02007F]">Quality</h3>
-                                    <p class="text-lg leading-relaxed">
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-[#02007F] md:text-black">Quality</h3>
+                                    <p class="text-lg leading-relaxed mt-1">
                                         Mageplaza is dedicated to delivering top-quality products and
                                         services. We strive for excellence, aiming to surpass expectations in every
                                         aspect of
                                         our operations.
                                     </p>
                                 </div>
-                            </div>
-
-                            <!-- Desktop layout -->
-                            <div class="hidden md:block">
-                                <div class="flex items-center">
-                                    <div class="w-14 h-14 flex items-center justify-center mr-1">
-                                        <img src="https://cdn2.mageplaza.com/media/about-us/Quality.svg" alt="Quality"
-                                            class="w-11 h-11">
-                                    </div>
-                                    <h3 class="text-2xl font-semibold">Quality</h3>
-                                </div>
-                                <p class="text-lg leading-relaxed pl-2">
-                                    Mageplaza is dedicated to delivering top-quality products and
-                                    services. We strive for excellence, aiming to surpass expectations in every aspect
-                                    of
-                                    our operations.
-                                </p>
                             </div>
                         </div>
                     </div>
