@@ -290,8 +290,8 @@ permalink: pages/solutions
                     <template x-for="(brand, index) in brands" :key="index">
                         <div class="h-24 flex items-center justify-center p-3 md:p-6"
                             :class="{
-                                'border-r border-gray-200': shouldHaveRightBorder(index),
-                                'border-b border-gray-200': shouldHaveBottomBorder(index)
+                                'border-r border-gray-300': shouldHaveRightBorder(index),
+                                'border-b border-gray-300': shouldHaveBottomBorder(index)
                             }">
                             <img :src="brand.image" :alt="brand.name"
                                 class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
