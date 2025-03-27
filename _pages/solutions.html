@@ -33,8 +33,8 @@ permalink: pages/solutions
                                 <h3 class="text-base md:text-lg font-bold mb-3 md:mb-4 text-center whitespace-nowrap">
                                     Software Development</h3>
                                 <div class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
-                                    <img src="{{ site.baseurl }}/images/icons/software-dev.svg" alt="Software Development"
-                                        class="w-12 h-12 md:w-16 md:h-16">
+                                    <img src="{{ site.baseurl }}/images/icons/software-dev.svg"
+                                        alt="Software Development" class="w-12 h-12 md:w-16 md:h-16">
                                 </div>
                             </div>
 
@@ -88,8 +88,8 @@ permalink: pages/solutions
                                 <h3 class="text-base md:text-lg font-bold mb-3 md:mb-4 text-center whitespace-nowrap">
                                     Blockchain development</h3>
                                 <div class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
-                                    <img src="{{ site.baseurl }}/images/icons/blockchain-dev.svg" alt="Blockchain development"
-                                        class="w-12 h-12 md:w-16 md:h-16">
+                                    <img src="{{ site.baseurl }}/images/icons/blockchain-dev.svg"
+                                        alt="Blockchain development" class="w-12 h-12 md:w-16 md:h-16">
                                 </div>
                             </div>
 
@@ -199,7 +199,8 @@ permalink: pages/solutions
 
                                 <!-- World Map Image (Mobile Only) -->
                                 <div class="pt-8">
-                                    <img src="{{ site.baseurl }}/images/stats.png" alt="Global Presence" class="w-full h-auto">
+                                    <img src="{{ site.baseurl }}/images/stats.png" alt="Global Presence"
+                                        class="w-full h-auto">
                                 </div>
                             </div>
                         </template>
@@ -255,79 +256,45 @@ permalink: pages/solutions
             { name: 'IBM', image: '{{ site.baseurl }}/images/ibm.png' },
             { name: 'Acer', image: '{{ site.baseurl }}/images/acer.png' }
         ],
-        isMobile: window.innerWidth < 768
-    }" x-init="window.addEventListener('resize', () => { isMobile = window.innerWidth < 768 })">
+        isMobile: window.innerWidth < 768,
+        init() {
+            window.addEventListener('resize', () => {
+                this.isMobile = window.innerWidth < 768;
+            });
+        },
+        shouldHaveRightBorder(index) {
+            if (this.isMobile) {
+                return index % 2 === 0 && index < this.brands.length - 1;
+            } else {
+                return (index + 1) % 5 !== 0;
+            }
+        },
+        shouldHaveBottomBorder(index) {
+            if (this.isMobile) {
+                return index < this.brands.length - 2;
+            } else {
+                return index < 5;
+            }
+        }
+    }">
         <div class="max-w-5xl mx-auto">
             <div class="container mx-auto">
                 <div class="text-center mb-8 md:mb-12">
-                    <span
-                        class="inline-block px-3 py-1 text-xs md:text-sm border border-[#2C3145] rounded-md mb-3 md:mb-4">Our
-                        Customers</span>
-                    <h2
-                        class="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#01007F] to-[#30E070] text-transparent bg-clip-text">
+                    <span class="inline-block px-3 py-1 text-xs md:text-sm border border-[#2C3145] rounded-md mb-3 md:mb-4">Our Customers</span>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#01007F] to-[#30E070] text-transparent bg-clip-text">
                         Trusted by leading brands
                     </h2>
                 </div>
 
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <!-- Mobile layout (3x4 grid) -->
-                    <template x-if="isMobile">
-                        <div class="grid grid-cols-3">
-                            <!-- Hàng 1: 0,1,2 -->
-                            <template x-for="(brand, index) in brands.slice(0,3)" :key="index">
-                                <div class="aspect-square border-b border-gray-300 flex items-center justify-center p-3"
-                                    :class="{'border-r': index < 2}">
-                                    <img :src="brand.image" :alt="brand.name"
-                                        class="max-h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                                </div>
-                            </template>
-
-                            <!-- Hàng 2: 3,4,5 -->
-                            <template x-for="(brand, index) in brands.slice(3,6)" :key="index + 3">
-                                <div class="aspect-square border-b border-gray-300 flex items-center justify-center p-3"
-                                    :class="{'border-r': index < 2}">
-                                    <img :src="brand.image" :alt="brand.name"
-                                        class="max-h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                                </div>
-                            </template>
-
-                            <!-- Hàng 3: 6,7,8 -->
-                            <template x-for="(brand, index) in brands.slice(6,9)" :key="index + 6">
-                                <div class="aspect-square border-gray-300 flex items-center justify-center p-3"
-                                    :class="{'border-r': index < 2, 'border-b': true}">
-                                    <img :src="brand.image" :alt="brand.name"
-                                        class="max-h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                                </div>
-                            </template>
-
-                            <!-- Hàng 4: Chỉ logo cuối (9) -->
-                            <div class="aspect-square col-start-2 col-span-1 flex items-center justify-center p-3">
-                                <img :src="brands[9].image" :alt="brands[9].name"
-                                    class="max-h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                            </div>
-                        </div>
-                    </template>
-
-                    <!-- Desktop layout (5x2 grid) -->
-                    <template x-if="!isMobile">
-                        <div class="grid grid-cols-5">
-                            <!-- Hàng 1: 0-4 -->
-                            <template x-for="(brand, index) in brands.slice(0,5)" :key="index">
-                                <div class="aspect-square border-b border-gray-300 flex items-center justify-center p-6 lg:p-8"
-                                    :class="{'border-r': index < 4}">
-                                    <img :src="brand.image" :alt="brand.name"
-                                        class="max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
-                                </div>
-                            </template>
-
-                            <!-- Hàng 2: 5-9 -->
-                            <template x-for="(brand, index) in brands.slice(5,10)" :key="index + 5">
-                                <div class="aspect-square flex items-center justify-center p-6 lg:p-8"
-                                    :class="{'border-r': index < 4}">
-                                    <img :src="brand.image" :alt="brand.name"
-                                        class="max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
-                                </div>
-                            </template>
+                <div class="grid grid-cols-2 md:grid-cols-5">
+                    <template x-for="(brand, index) in brands" :key="index">
+                        <div class="h-24 flex items-center justify-center p-3 md:p-6"
+                            :class="{
+                                'border-r border-gray-200': shouldHaveRightBorder(index),
+                                'border-b border-gray-200': shouldHaveBottomBorder(index)
+                            }">
+                            <img :src="brand.image" :alt="brand.name"
+                                class="max-h-8 md:max-h-10 lg:max-h-12 w-auto grayscale hover:grayscale-0 transition-all">
                         </div>
                     </template>
                 </div>
@@ -488,10 +455,10 @@ permalink: pages/solutions
                                     @mouseenter="hover = true" @mouseleave="hover = false">
                                     <div class="flex flex-col items-center">
                                         <div class="flex justify-center mb-4">
-                                            <img x-show="!hover" src="{{ site.baseurl }}/images/shopify-mono-black.png" alt="Shopify"
-                                                class="h-8">
-                                            <img x-show="hover" src="{{ site.baseurl }}/images/shopify_logo_black.png" alt="Shopify"
-                                                class="h-8">
+                                            <img x-show="!hover" src="{{ site.baseurl }}/images/shopify-mono-black.png"
+                                                alt="Shopify" class="h-8">
+                                            <img x-show="hover" src="{{ site.baseurl }}/images/shopify_logo_black.png"
+                                                alt="Shopify" class="h-8">
                                         </div>
                                         <div class="flex justify-center mb-2">
                                             <div class="flex space-x-1">
