@@ -244,16 +244,16 @@ permalink: pages/solutions
     <!-- Trusted Brands Section -->
     <section class="py-12 md:py-16 px-4 md:px-8 lg:px-16 bg-white" x-data="{
         brands: [
-            { name: 'Circle C', image: '/images/circle-c.png' },
-            { name: 'Khasto', image: '/images/khasto.png' },
-            { name: 'My Kingdom', image: '/images/my-kingdom.png' },
-            { name: 'Peter Stevens', image: '/images/peter-stevens.png' },
-            { name: 'Vinamilk', image: '/images/vinamilk.png' },
-            { name: 'Yogya Online', image: '/images/yogya-online.png' },
-            { name: 'Printster', image: '/images/printster.png' },
-            { name: 'Bean Bags R Us', image: '/images/bean-bags-r-us.png' },
-            { name: 'IBM', image: '/images/ibm.png' },
-            { name: 'Acer', image: '/images/acer.png' }
+            { name: 'Circle C', image: '{{ site.baseurl }}/images/circle-c.png' },
+            { name: 'Khasto', image: '{{ site.baseurl }}/images/khasto.png' },
+            { name: 'My Kingdom', image: '{{ site.baseurl }}/images/my-kingdom.png' },
+            { name: 'Peter Stevens', image: '{{ site.baseurl }}/images/peter-stevens.png' },
+            { name: 'Vinamilk', image: '{{ site.baseurl }}/images/vinamilk.png' },
+            { name: 'Yogya Online', image: '{{ site.baseurl }}/images/yogya-online.png' },
+            { name: 'Printster', image: '{{ site.baseurl }}/images/printster.png' },
+            { name: 'Bean Bags R Us', image: '{{ site.baseurl }}/images/bean-bags-r-us.png' },
+            { name: 'IBM', image: '{{ site.baseurl }}/images/ibm.png' },
+            { name: 'Acer', image: '{{ site.baseurl }}/images/acer.png' }
         ],
         isMobile: window.innerWidth < 768
     }" x-init="window.addEventListener('resize', () => { isMobile = window.innerWidth < 768 })">
